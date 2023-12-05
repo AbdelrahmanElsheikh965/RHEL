@@ -1,0 +1,101 @@
+1. 
+	=> sudo useradd islam -c "Islam Askar"
+	=> sudo passwd islam
+2. 
+	=> sudo useradd baduser -c "Bad User"
+	=> sudo passwd baduser	
+
+3. 	sudo groupadd pgroup --gid 30000
+
+4.	sudo groupadd badgroup
+
+5.	sudo useradd -G pgroup islam
+
+6. 	sudo passwd islam
+
+7. 	sudo chage -M 30 islam
+
+8.	sudo usermod -L baduser
+
+9.	sudo userdel baduser
+
+10.	sudo groupdel badgroup
+
+-----------------------------------------------------------------------------------------------------------------
+13.	sudo mkdir myteam
+	sudo chmod 400 myteam (assuming read = 4, write = 2, execute = 1)
+	to assure everything is right paste > sudo ls -ld myteam
+	
+14.	su - islam (switch user to be islam)
+
+15.	if he wasn't the owner  :=> islam is not in the sudoers file.  This incident will be reported.
+	if he is the owner	:=> cd /home/myteam OR cd ./myteam (assuming i'm in the home directory) but NOT WORKING can't access
+
+16.	
+
+1)
+	symbolic method:
+	reuired permission is (-rw--wx--x)
+	sudo chmod u+rw oldpasswd
+	sudo chmod g+wx oldpasswd
+	sudo chmod g-r oldpasswd
+	sudo chmod o-r oldpasswd
+	sudo chmod o+x oldpasswd
+	now permissions are   (-rw--wx--x)
+	
+	numerical method:
+	sudo chmod 631 oldpasswd
+2)	umask 033		(VIP)
+3) 	max permissions file can have is 9
+4)	umask 077		(VIP)
+
+
+17.	
+
+1) 4 (rx for source) (wx for target)
+2) 2 (r for source)  (w for target)
+3) 1 (write permission on directory containing the file regardelss of the file's permissions)
+4) 1 (x execute on that directory)
+5) 1 (r read on that dir)
+6) 1 (r read)
+7) 1 (w write)
+
+18.	sudo chmod 444 file
+	sudo ls -l file
+	nano file :=> permission denied when trying 
+	rm file   :=> permission denied
+
+19.	x for directory 
+		means cd (open it | 'cd' change directory into it)
+	x for file 
+		means execute it   
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+

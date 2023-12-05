@@ -1,0 +1,76 @@
+1.	cd /home/docs 
+	vi mycv
+	write your data and press 'esc' type
+	:wq to save and quit 
+	:q! to ignore changes and quit
+	
+2.	
+	a. j
+	b. k
+	c. /age (case sensitive)
+	d. two solutions (:5 OR 5G)
+	e. dd (delete the line you are on)
+	   then, :5 and dd again
+   	f. A (to step to the end of line & change to writing mode).
+   	
+3. 	sudo cat /etc/shells
+
+4. 	printenv
+
+5. 	env
+
+6.		echo $PATH (echo $NAME_OF_THE_VARIABLE)
+	OR :=>  printenv HOME SHELL ( pass the variable name to 'printenv' )
+	OR :=>  env | grep USERNAME ( pass the variable name to 'grep' )
+
+7.	echo $SHELL
+
+8.	~/.profile
+		It gets executed automatically by DisplayManager during startup
+		process desktop session as well as by the login shell when on logs-
+		in from the textual console.
+	~/.bash_profile or ~/.bash_login
+		If one of these file exits, bash executes it rather than "~/.profile"
+		when it is started as a login shell. (Bash will prefer "~/.bash_profile"
+		to "~/.bash_login"). However, these files won't influence a graphical
+		session by default.
+
+9.	edit in .bashrc (hidden file)
+
+10. 	The purpose of \ is being able to write multi-line command
+	> refers to rest of command
+	I don't actually know how to change it from “>” to “:”.
+
+11. 	alias ls="ls -l"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

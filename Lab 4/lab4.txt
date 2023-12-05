@@ -1,0 +1,94 @@
+1.	ls /usr/bin > /tmp/commands.list
+
+2.	wc -l /tmp/commands.list	(Words count: lines)
+
+3.	grep ^g /etc/passwd 	OR 	cut -f1 -d: /etc/passwd | grep ^g /etc/passwd
+
+4.	cut -f1,5 -d: /etc/passwd | grep ^g	(f1 => index of field [1] for name and [5] for comment)
+
+5.	cut -f1,5 -d: /etc/passwd | grep ^g | sort -t : -n -k5 > sorted_names.txt
+
+6.	
+	1)	find /etc -type f -name ".bash_profile"	(May not work as expected)
+	2)	ls / -R | sort -t : -n > sorted.txt 2> errors_file -d	
+		ls / -R > errors_file -d | sort -t : -n > sorted.txt 2	(error redirection should be after ls not after sort)
+
+
+7.	who
+
+8.	head /etc/passwd | tail -4
+
+9.	
+	1)	cat filename1 | cat filename2 	=> (Display filename2 contents and overwrites the screen's output from opening filename1)
+	2)	ls | rm			=> (supposed to remove listed items in the current directory but it isssued an error) - rm: missing operand
+	3)	ls /etc/passwd | wc –l		=> count number of lines of the output of (listing ls /etc/passwd)
+	
+10.	sleep 100
+
+11.	ctrl + z (to stop the sleep process)
+
+12.	jobs then, => fg %1
+	
+13.	jobs
+
+14.	fg %1 and => then => bg %1
+
+15.	kill %1	OR strl + c
+
+16.	ps -u abdulrhman_elsheikh
+
+17.	ps -e | grep -v "abdulrhman_elsheikh"
+
+18.	pgrep -u abdulrhman_elsheikh
+
+19.	pkill -u root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12.	
+	
